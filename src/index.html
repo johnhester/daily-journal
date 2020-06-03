@@ -6,7 +6,7 @@
     <title>Daily Journal</title>
     <link rel="stylesheet" href="styles/journal.css">
 </head>
-<body>
+<body class="journalBg">
     <form class="journal" id="journal" action="">
         <fieldset>
             <!-- Journal Entry Form  -->
@@ -19,14 +19,15 @@
             <label for="mood">Mood:</label>
             <select name="moods" id="mood" required>
                 <option value="">How ya feelin?</option>
-                <option value="happy">😀</option>
-                <option value="sad">🙁</option>
-                <option value="neutral">😐</option>
-                <option value="angry">🤬</option>
+                <option value="happy">😀 Happy</option>
+                <option value="sad">🙁 Sad</option>
+                <option value="neutral">😐 Neutral</option>
+                <option value="angry">🤬 Angry</option>
                 <option value="naughty">😈</option>
                 <option value="cool">😎</option>
                 <option value="love">🥰</option>
                 <option value="fierce">🐉</option>
+                <option value="focused">🎯</option>
                 <option value="triumph">🌟🕺🌟</option>
             </select><br>
             <button form="journal" type="submit" class="button">Record Entry</button>
