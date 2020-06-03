@@ -1,14 +1,15 @@
 const journalPost = () => {
 
-    for (const property in journalEntries) {
+    for (const currentEntry of journalEntries) {
         //convertys object into html entry
-        const journalEntryHTML = entryConverter(property)
+        const entryHTML = entryConverter(currentEntry)
+        console.log(currentEntry)
         
         //locate html tag to post entries in
         const journalEntryElement =  document.querySelector('.oldEntries')
 
         //post entries
-        journalEntryElement += journalEntryHTML
+        journalEntryElement.innerHTML += entryHTML
     }
 
 }

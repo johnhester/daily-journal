@@ -3,7 +3,7 @@ const entryConverter = (journalObject) => {
     const entryHTMLRep = `
     <section class="prevEntry">
         <div class="prevEntry__banner">
-            <div class="prevEntry__banner--element">${journalObject.journaldate}</div>
+            <div class="prevEntry__banner--element">Date: ${journalObject.journalDate}</div>
             <div class="prevEntry__banner--element">Concepts: ${journalObject.journalConcepts}</div>
             <div class="prevEntry__banner--element">Mood: ${journalObject.mood}</div>
         </div>
