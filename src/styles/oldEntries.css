@@ -17,6 +17,7 @@
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;
+    margin: .2rem;
 }
 
 .prevEntry__banner--element {
@@ -26,4 +27,5 @@
 
 .prevEntry__text {
     border: 1px solid black;
+    margin: .2rem;
 }
