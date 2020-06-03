@@ -1,8 +1,5 @@
-.journalBg {
-    background-image: url('../images/galaxyStarsbg.jpg');
-    display: flex;
-}
 
 .journal {
     background-color: white;
+    justify-content: center;
 }

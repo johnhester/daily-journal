@@ -1,0 +1,15 @@
+.newEntry {
+    display: flex;
+    width: 80%;
+    height: auto;
+    border: 1px solid black;
+    margin: 2rem;
+}
+
+.newEntry__fields {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 2rem;
+}
