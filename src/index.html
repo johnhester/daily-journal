@@ -9,9 +9,9 @@
 </head>
 
 <body class="journalBg">
-    <header>
-        <div class="banner">
-            Banner
+    <header  class="banner">
+        <div>
+            <h1>Daily Journal</h1>
         </div>
     </header>
     <main class="journalBody">
@@ -47,7 +47,16 @@
             </form>
         </article>
         <article class="oldEntries">
-            Older journal entries
+            <h2>Previous Journal Entries</h2>
+            <section class="prevEntry">
+                <div class="prevEntry__banner">
+                    <div class="prevEntry__banner--element">Date</div>
+                    <div class="prevEntry__banner--element">Topic</div>
+                    <div class="prevEntry__banner--element">Mood!</div>
+                </div>
+                <p class="prevEntry__text"></p>
+            </section>
+
         </article>
     </main>
     <script src="/scripts/journalData.js"></script>
