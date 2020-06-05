@@ -1,1 +1,3 @@
-journalPost();
+getJournalData().then(
+    () => {journalPost()}
+)

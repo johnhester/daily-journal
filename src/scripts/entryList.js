@@ -1,3 +1,6 @@
+
+
+
 const journalPost = () => {
 
     for (const currentEntry of journalEntries) {
