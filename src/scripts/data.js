@@ -1,16 +1,8 @@
 let journalEntries = []
 
-const getJournalData = () => {
-
-    return fetch("http://localhost:8088/entries").then(
-
-        (httpResponse) => {return httpResponse.json()}
-
-    ).then(
-
-        (entryArray) => {journalEntries = entryArray}
-
-    )
+const API = {
+    getJournalEntries () {
+        return fetch("http://localhost:3000/entries")
+            .then(response => response.json())
+    }
 }
-
-console.log('outside', journalEntries)
