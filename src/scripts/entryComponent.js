@@ -12,3 +12,4 @@ const entryConverter = (journalObject) => {
     `
     return entryHTMLRep;
 }
+
