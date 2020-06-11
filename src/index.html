@@ -16,7 +16,7 @@
     </header>
     <main class="journalBody">
         <article class="newEntry">
-            <form class="journal" id="journal" action="">
+            <form class="journal" id="journal" method="GET">
                 <fieldset class="newEntry__fields">
                     <!-- Journal Entry Form  -->
                     <label class="newEntry__title" for="journalDate">Date of Entry</label>
@@ -41,9 +41,10 @@
                         <option value="focused">🎯</option>
                         <option value="triumph">🌟🕺🌟</option>
                     </select><br>
-                    <button form="journal" type="submit" class="button">Record Entry</button>
+                    <input type="submit" id="myJournalButton" value="Record Entry">
+                    
                 </fieldset>
-
+                
             </form>
         </article>
         <article class="oldEntries">
@@ -51,6 +52,7 @@
             
         </article>
     </main>
+    <script src="/scripts/entryGrabber.js"></script>
     <script src="/scripts/data.js"></script>
     <script src="/scripts/entryComponent.js"></script>
     <script src="/scripts/entryList.js"></script>
