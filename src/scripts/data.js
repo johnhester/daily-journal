@@ -9,7 +9,7 @@ const API = {
     helloWorld () {
         console.log("Hello World")
     },
-    saveJournalEntry: (newEntryObject) => {
+    saveJournalEntry (newEntryObject) {
         return fetch("http://localhost:8088/entries", {
             method: "POST",
             headers: {
