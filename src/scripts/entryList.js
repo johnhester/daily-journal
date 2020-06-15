@@ -1,8 +1,9 @@
 
 
-
+// deals with modifying the dom
 const entryMechanism = {
-    journalPost () {
+    journalPost (journalEntries) {
+        console.log(journalEntries)
         for (const currentEntry of journalEntries) {
             const entryHTML = entryConverter(currentEntry)
             const journalEntryElement =  document.querySelector('.oldEntries')

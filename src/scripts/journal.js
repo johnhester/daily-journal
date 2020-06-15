@@ -6,10 +6,11 @@
     to get the data and display it.
 */
 
-let journalEntries = []
+// let journalEntries = [] 
 API.getJournalEntries()
-    .then(entryData => journalEntries = entryData)
-    .then( () => entryMechanism.journalPost() )
+    .then((entryData)  => {journalEntries = entryData
+        return journalEntries})
+    .then( (journalEntries) => entryMechanism.journalPost(journalEntries) )
 //invokes fetch call 
 
 
