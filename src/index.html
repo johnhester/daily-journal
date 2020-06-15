@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Journal</title>
-    <link rel="stylesheet" href="styles/journal.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
-    <form class="journal" id="journal" action="">
-        <fieldset>
-            <!-- Journal Entry Form  -->
-            <label for="journalDate">Date of Entry</label>
-            <input type="date" name="journalDate" id="journalDate" required><br>
-            <label for="journalConcepts">Concepts Covered:</label>
-            <input type="text" name="journalConcepts" id="journalConcepts" required></input><br>
-            <label for="journalEntry">Journal Entry:</label>
-            <textarea name="journalEntry" id="journalEntry" rows="10" cols="50" required>A penny for your thoughts...</textarea><br>
-            <label for="mood">Mood:</label>
-            <select name="moods" id="mood" required>
-                <option value="">How ya feelin?</option>
-                <option value="happy">😀</option>
-                <option value="sad">🙁</option>
-                <option value="neutral">😐</option>
-                <option value="angry">🤬</option>
-                <option value="naughty">😈</option>
-                <option value="cool">😎</option>
-                <option value="love">🥰</option>
-                <option value="fierce">🐉</option>
-                <option value="triumph">🌟🕺🌟</option>
-            </select><br>
-            <button form="journal" type="submit" class="button">Record Entry</button>
-        </fieldset>
-    </form>
+
+<body class="journalBg">
+    <header  class="banner">
+        <div>
+            <h1>Daily Journal</h1>
+        </div>
+    </header>
+    <main class="journalBody">
+        <article class="newEntry">
+            <form class="journal" id="journal" method="GET">
+                <fieldset class="newEntry__fields">
+                    <!-- Journal Entry Form  -->
+                    <label class="newEntry__title" for="journalDate">Date of Entry</label>
+                    <input class="newEntry__input" type="date" name="journalDate" id="journalDate" required><br>
+                    <label class="newEntry__title" for="journalConcepts">Concepts Covered:</label>
+                    <input class="newEntry__input" type="text" name="journalConcepts" id="journalConcepts"
+                        required></input><br>
+                    <label class="newEntry__title" for="journalEntry">Journal Entry:</label>
+                    <textarea class="newEntry__input" name="journalEntry" id="journalEntry" rows="10" cols="50"
+                        required>A penny for your thoughts...</textarea><br>
+                    <label class="newEntry__title" for="mood">Mood:</label>
+                    <select class="newEntry__input" name="moods" id="mood" required>
+                        <option value="">How ya feelin?</option>
+                        <option value="😀">😀</option>
+                        <option value="🙁">🙁</option>
+                        <option value="😐">😐</option>
+                        <option value="🤬">🤬</option>
+                        <option value="😈">😈</option>
+                        <option value="😎">😎</option>
+                        <option value="🥰">🥰</option>
+                        <option value="🐉">🐉</option>
+                        <option value="🎯">🎯</option>
+                        <option value="🌟🕺🌟">🌟🕺🌟</option>
+                    </select><br>
+                    <button type="submit" id="myJournalButton">Record Entry</button>
+                    
+                </fieldset>
+                
+            </form>
+        </article>
+        <article class="oldEntries">
+            <h2>Previous Journal Entries</h2>
+            
+        </article>
+    </main>
+
+    
+    
+
+    <script type="module" src="/scripts/entryGrabber.js"></script>
+    <script type="module" src="/scripts/journal.js"></script>
 </body>
+
 </html>

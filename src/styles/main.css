@@ -1,0 +1,19 @@
+@import 'journal.css';
+@import 'newEntry.css';
+@import 'oldEntries.css';
+@import 'jBanner.css';
+
+
+.journalBg {
+    background-image: url('../images/galaxyStarsbg.jpg');
+    background-attachment: fixed;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.journalBody {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
