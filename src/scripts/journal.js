@@ -6,9 +6,12 @@
     to get the data and display it.
 */
 
+import API from "./data.js"
+import entryMechanism from "./entryDOM.js"
+
 // let journalEntries = [] 
 API.getJournalEntries()
-    .then((entryData)  => {journalEntries = entryData
+    .then((entryData)  => { let journalEntries = entryData
         return journalEntries})
     .then( (journalEntries) => entryMechanism.journalPost(journalEntries) )
 //invokes fetch call 

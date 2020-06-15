@@ -1,10 +1,10 @@
-import API from "./saveJournalEntry.js"
+import API from "./data.js"
 
 // grabs new entry data 
 
 
 
-document.querySelector("#myJournalButton").addEventListener("click", event => {
+document.getElementById("#myJournalButton").addEventListener("click", event => {
 
     const journalEntryObj = {}
 
