@@ -69,6 +69,20 @@
       "entry": "ha ha ha ",
       "mood": "😀",
       "id": 10
+    },
+    {
+      "date": "2020-06-15",
+      "concepts": "blah, html",
+      "entry": "live from the garden",
+      "mood": "😎",
+      "id": 11
+    },
+    {
+      "date": "2020-06-24",
+      "concepts": "adsf",
+      "entry": "A penny for your thoughadsfadsts...",
+      "mood": "🌟🕺🌟",
+      "id": 12
     }
   ]
 }
