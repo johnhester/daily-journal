@@ -8,6 +8,7 @@
 
 import API from "./data.js"
 import entryMechanism from "./entryDOM.js"
+import entryGrabber from "./entryGrabber.js"
 
 // loads previous journal entries
 API.getJournalEntries()
@@ -20,15 +21,10 @@ API.getJournalEntries()
 //grabs new entry and passes to API Post
 document.querySelector("#myJournalButton").addEventListener("click", event => {
 
-    const journalEntryObj = {}
-//stores each entry type as a key:value pair
-    journalEntryObj.date = document.querySelector("#journalDate").value
-    journalEntryObj.concepts = document.querySelector("#journalConcepts").value
-    journalEntryObj.entry = document.querySelector("#journalEntry").value
-    journalEntryObj.mood = document.querySelector("#mood").value
+    let entryObj = entryGrabber()
 
-    console.log(journalEntryObj)
-    API.saveJournalEntry(journalEntryObj)
+    console.log(entryObj)
+    API.saveJournalEntry(entryObj)
        // .then((entries) => console.log(entries))
 })
 
