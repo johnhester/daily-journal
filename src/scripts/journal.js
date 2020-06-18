@@ -21,7 +21,7 @@ API.getJournalEntries()
 document.querySelector("#myJournalButton").addEventListener("click", event => {
 
     const journalEntryObj = {}
-
+//stores each entry type as a key:value pair
     journalEntryObj.date = document.querySelector("#journalDate").value
     journalEntryObj.concepts = document.querySelector("#journalConcepts").value
     journalEntryObj.entry = document.querySelector("#journalEntry").value
@@ -29,6 +29,7 @@ document.querySelector("#myJournalButton").addEventListener("click", event => {
 
     console.log(journalEntryObj)
     API.saveJournalEntry(journalEntryObj)
+       // .then((entries) => console.log(entries))
 })
 
 
