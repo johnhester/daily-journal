@@ -15,18 +15,21 @@ API.getJournalEntries()
     .then((entryData)  => { let journalEntries = entryData
         return journalEntries})
     .then( (journalEntries) => entryMechanism.journalPost(journalEntries) )
-//invokes fetch call 
 
 
 //grabs new entry and passes to API Post
-document.querySelector("#myJournalButton").addEventListener("click", event => {
+ document.querySelector("#myJournalButton").addEventListener("click", event => {
 
+    //journal entry factor function
     let entryObj = entryGrabber()
 
-    console.log(entryObj)
     API.saveJournalEntry(entryObj)
-       // .then((entries) => console.log(entries))
+    //    .then(API.getJournalEntries()
+    //         .then((newData) => {let newEntries = newData
+    //         return newEntries})
+    //         .then((newEntries) => entryMechanism.journalPost(newEntries)))
 })
+
 
 
 
