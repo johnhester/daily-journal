@@ -23,11 +23,12 @@ API.getJournalEntries()
     //journal entry factor function
     let entryObj = entryGrabber()
 
-    API.saveJournalEntry(entryObj)
-    //    .then(API.getJournalEntries()
-    //         .then((newData) => {let newEntries = newData
-    //         return newEntries})
-    //         .then((newEntries) => entryMechanism.journalPost(newEntries)))
+    API.saveJournalEntry(entryObj).then(document.querySelector(".oldEntries").innerHTML = "")
+       .then(API.getJournalEntries()
+            .then((newData) => {let newEntries = newData
+                console.log(newEntries)
+                return newEntries})
+            .then((newEntries) => entryMechanism.journalPost(newEntries)))
 })
 
 
