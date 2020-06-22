@@ -1,5 +1,6 @@
-import API from "./api.js"
+import API from "./data.js"
 import entryMechanism from "./entryDOM.js"
+import clear from "./clearForm.js"
 
 
 const editEntry = id => {
@@ -21,10 +22,7 @@ const editEntry = id => {
             of editing
         */
 
-        document.querySelector("#journalDate").value = ""
-        document.querySelector("#journalConcepts").value = ""
-        document.querySelector("#journalEntry").value = ""
-        document.querySelector("#mood").value = ""
+        clear()
     })
     .then(API.getJournalEntries).then(entries => entryMechanism.journalPost(entries))
     

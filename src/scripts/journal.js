@@ -8,7 +8,6 @@
 
 import API from "./data.js"
 import entryMechanism from "./entryDOM.js"
-import entryGrabber from "./entryGrabber.js"
 import event from "./eventListeners.js"
 
 
@@ -16,22 +15,14 @@ import event from "./eventListeners.js"
 API.getJournalEntries()
     .then( journalEntries => entryMechanism.journalPost(journalEntries) )
 
+//test
+document.querySelector("#entryId").value = ""
 
-//grabs new entry and passes to API Post
- document.querySelector("#myJournalButton").addEventListener("click", event => {
-
-    //journal entry factor function
-    let entryObj = entryGrabber()
-
-    API.saveJournalEntry(entryObj).then(document.querySelector(".oldEntries").innerHTML = "")
-       .then(API.getJournalEntries()
-            .then(newEntries => entryMechanism.journalPost(newEntries)))
-})
 
 
 // listens for delete command via click
     event.registerDeleteListener()
     event.registerEditListener()
-
+    event.saveButtonListener()
 
 

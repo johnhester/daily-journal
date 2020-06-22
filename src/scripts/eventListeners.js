@@ -2,6 +2,7 @@ import API from "./data.js"
 import entryMechanism from "./entryDOM.js"
 import updateFormFields from "./updateEntry.js"
 import editEntry from "./editEntry.js"
+import saveEntry from "./saveEntry.js"
 
 const entryList = document.querySelector(".oldEntries")
 const saveButton = document.querySelector("#myJournalButton")
@@ -29,6 +30,7 @@ export default {
                     This function will get the recipe from the API
                     and populate the form fields (see below)
                 */
+                
                 updateFormFields(entryIdToEdit)
             }
         })
@@ -36,7 +38,6 @@ export default {
     saveButtonListener () {
         saveButton.addEventListener("click", event => {
             const hiddenEntryId = document.querySelector("#entryId").value
-            console.log(hiddenRecipeId)
 
             // If the input field has a value, then user is editing
             // If the input field has no value, then user is creating
@@ -44,7 +45,7 @@ export default {
             if (hiddenEntryId.value !== "") {
                 editEntry(hiddenEntryId)
             } else {
-                //save functionality goes here
+                saveEntry()
             }
         })
     }
