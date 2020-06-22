@@ -42,6 +42,7 @@ export default {
             // If the input field has a value, then user is editing
             // If the input field has no value, then user is creating
 
+
             if (hiddenEntryId.value !== "") {
                 editEntry(hiddenEntryId)
             } else {

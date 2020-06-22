@@ -16,7 +16,7 @@ API.getJournalEntries()
     .then( journalEntries => entryMechanism.journalPost(journalEntries) )
 
 //test
-document.querySelector("#entryId").value = ""
+
 
 
 

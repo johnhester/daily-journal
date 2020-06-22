@@ -11,7 +11,7 @@ const API = {
     helloWorld () {
         console.log("Hello World")
     },
-    saveJournalEntry (newEntryObject) {
+    saveJournalEntry: (newEntryObject) => {
         return fetch(`${jsonUrl}entries`, {
             method: "POST",
             headers: {
@@ -31,7 +31,7 @@ const API = {
         return fetch(`${jsonUrl}entries/${entryId}`)
         .then(response => response.json())
     },
-    editEntry (entryId, updatedEntryObject) {
+    editEntry: (entryId, updatedEntryObject) => {
         return fetch(`${jsonUrl}entries/${entryId}`, {
             method: "PUT",
             headers: {
