@@ -17,3 +17,8 @@
     align-items: center;
     flex-flow: column;
 }
+
+.oldEntryHeader {
+    background-color: white;
+    border: black solid 1px;
+}

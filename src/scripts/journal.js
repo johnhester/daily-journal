@@ -9,6 +9,8 @@
 import API from "./data.js"
 import entryMechanism from "./entryDOM.js"
 import entryGrabber from "./entryGrabber.js"
+import deleteEvent from "./deleteListener.js"
+
 
 // loads previous journal entries
 API.getJournalEntries()
@@ -32,8 +34,8 @@ API.getJournalEntries()
 })
 
 
-
-
+// listens for delete command via click
+    deleteEvent.registerDeleteListener()
 
 
 
