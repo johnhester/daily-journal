@@ -17,16 +17,23 @@
     <main class="journalBody">
         <article class="newEntry">
             <form class="journal" id="journal" method="POST">
+                <input type="hidden" id="entryId" value=""/>
                 <fieldset class="newEntry__fields">
                     <!-- Journal Entry Form  -->
                     <label class="newEntry__title" for="journalDate">Date of Entry</label>
                     <input class="newEntry__input" type="date" name="journalDate" id="journalDate" required><br>
+                </fieldset>
+                <fieldset class="newEntry__fields">
                     <label class="newEntry__title" for="journalConcepts">Concepts Covered:</label>
                     <input class="newEntry__input" type="text" name="journalConcepts" id="journalConcepts"
                         required></input><br>
+                </fieldset>
+                <fieldset class="newEntry__fields">
                     <label class="newEntry__title" for="journalEntry">Journal Entry:</label>
                     <textarea class="newEntry__input" name="journalEntry" id="journalEntry" placeholder="A penny for your thoughts..." rows="10" cols="50"
                         required></textarea><br>
+                </fieldset>
+                <fieldset class="newEntry__fields">
                     <label class="newEntry__title" for="mood">Mood:</label>
                     <select class="newEntry__input" name="moods" id="mood" required>
                         <option value="">How ya feelin?</option>
@@ -39,10 +46,10 @@
                         <option value="🥰"> Loved 🥰</option>
                         <option value="🐉"> Fierce 🐉</option>
                         <option value="🎯"> Focused 🎯</option>
+                        <option value="🍆💦💦">U know 🍆💦💦</option>
                         <option value="🌟🕺🌟"> Triumphant🌟🕺🌟</option>
                     </select><br>
-                    <button type="button" id="myJournalButton">Record Entry</button>
-                    
+                    <button type="button" id="myJournalButton">Record Entry</button>                    
                 </fieldset>
                 
             </form>

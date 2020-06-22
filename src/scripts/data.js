@@ -26,6 +26,20 @@ const API = {
         })
             .then(response => response.json())
 
+    },    
+    getSingleEntry (entryId) {
+        return fetch(`${jsonUrl}entries/${entryId}`)
+        .then(response => response.json())
+    },
+    editEntry (entryId, updatedEntryObject) {
+        return fetch(`${jsonUrl}entries/${entryId}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedEntryObject)
+        })
+        .then(response => response.json())
     }
 }
 
