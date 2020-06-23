@@ -1,6 +1,7 @@
 import API from "./data.js"
 import entryGrabber from "./entryGrabber.js"
 import clear from "./clearForm.js"
+import entryMechanism from "./entryDOM.js"
 
 
 

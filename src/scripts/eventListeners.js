@@ -37,7 +37,7 @@ export default {
     },
     saveButtonListener () {
         saveButton.addEventListener("click", event => {
-            const hiddenEntryId = document.querySelector("#entryId").value
+            const hiddenEntryId = document.querySelector("#entryId")
 
             // If the input field has a value, then user is editing
             // If the input field has no value, then user is creating
