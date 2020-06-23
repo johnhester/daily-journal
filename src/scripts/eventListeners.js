@@ -49,5 +49,25 @@ export default {
                 saveEntry()
             }
         })
+    },
+    moodFilterListener () {
+               
+        //now attempt to get the mood sorter value
+        document.querySelector("#moodSortButton").addEventListener("click", event => {
+
+            //aquires chosen mood value
+            const moodToFilter = document.querySelector("#moods").value
+
+            console.log(moodToFilter)
+            //calls in journal entries to filter
+            API.getJournalEntries()
+                .then((entries) => {
+                    //filter returns an array
+                    const filteredEntries = entries.filter(post => post.mood === moodToFilter)
+                    return filteredEntries})
+                .then(filteredEntries => entryMechanism.journalPost(filteredEntries))
+
+        })
+
     }
 }

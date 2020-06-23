@@ -14,7 +14,8 @@ const editEntry = id => {
     // Logic for the PUT operation
     API.editEntry(id, updatedObject)
     .then(() => {clear()})
-    .then(API.getJournalEntries).then(entries => entryMechanism.journalPost(entries))
+    .then(API.getJournalEntries)
+    .then(entries => entryMechanism.journalPost(entries))
     
 
 }

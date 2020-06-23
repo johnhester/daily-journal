@@ -26,3 +26,7 @@
 .hidden {
     display: none;
 }
+
+.moodSort {
+    background-color: white;
+}

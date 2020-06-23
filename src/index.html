@@ -34,26 +34,24 @@
                         required></textarea><br>
                 </fieldset>
                 <fieldset class="newEntry__fields">
-                    <label class="newEntry__title" for="mood">Mood:</label>
-                    <select class="newEntry__input" name="moods" id="mood" required>
-                        <option value="">How ya feelin?</option>
-                        <option value="😀"> Happy 😀</option>
-                        <option value="🙁"> Sad 🙁</option>
-                        <option value="😐"> Neutral 😐</option>
-                        <option value="🤬"> Angry 🤬</option>
-                        <option value="😈"> Naughty 😈</option>
-                        <option value="😎"> Cool 😎</option>
-                        <option value="🥰"> Loved 🥰</option>
-                        <option value="🐉"> Fierce 🐉</option>
-                        <option value="🎯"> Focused 🎯</option>
-                        <option value="🍆💦💦">U know 🍆💦💦</option>
-                        <option value="🌟🕺🌟"> Triumphant🌟🕺🌟</option>
-                    </select><br>
+                    <div class="moodlist">
+                        <label class="newEntry__title" for="mood">Mood:</label>
+                        <select class="newEntry__input" name="moods" id="mood" required>
+                            <option value="">How ya feelin?</option>
+                        </select><br>
+                    </div>
                     <button type="button" id="myJournalButton">Record Entry</button>                    
                 </fieldset>
-                
+                <hr/>                
             </form>
         </article>
+        <section class="moodSort">            
+            <label class="moodSort__title" for="moods"><h2>Filter Journal Entries by Mood</h2></label>
+            <select class="moodSort__input" name="moods" id="moods" required>
+                <option value="">Pick a mood</option>
+            </select><br>
+            <button type="button" id="moodSortButton">Filter</button> 
+        </section>
         <section>
             <h2 class="oldEntryHeader">Previous Journal Entries</h2>
             <article class="oldEntries">
