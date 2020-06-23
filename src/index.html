@@ -16,47 +16,57 @@
     </header>
     <main class="journalBody">
         <article class="newEntry">
-            <form class="journal" id="journal" method="GET">
+            <form class="journal" id="journal" method="POST">
+                <input type="hidden" id="entryId" value=""/>
                 <fieldset class="newEntry__fields">
                     <!-- Journal Entry Form  -->
                     <label class="newEntry__title" for="journalDate">Date of Entry</label>
                     <input class="newEntry__input" type="date" name="journalDate" id="journalDate" required><br>
+                </fieldset>
+                <fieldset class="newEntry__fields">
                     <label class="newEntry__title" for="journalConcepts">Concepts Covered:</label>
                     <input class="newEntry__input" type="text" name="journalConcepts" id="journalConcepts"
                         required></input><br>
+                </fieldset>
+                <fieldset class="newEntry__fields">
                     <label class="newEntry__title" for="journalEntry">Journal Entry:</label>
-                    <textarea class="newEntry__input" name="journalEntry" id="journalEntry" rows="10" cols="50"
-                        required>A penny for your thoughts...</textarea><br>
+                    <textarea class="newEntry__input" name="journalEntry" id="journalEntry" placeholder="A penny for your thoughts..." rows="10" cols="50"
+                        required></textarea><br>
+                </fieldset>
+                <fieldset class="newEntry__fields">
                     <label class="newEntry__title" for="mood">Mood:</label>
                     <select class="newEntry__input" name="moods" id="mood" required>
                         <option value="">How ya feelin?</option>
-                        <option value="😀">😀</option>
-                        <option value="🙁">🙁</option>
-                        <option value="😐">😐</option>
-                        <option value="🤬">🤬</option>
-                        <option value="😈">😈</option>
-                        <option value="😎">😎</option>
-                        <option value="🥰">🥰</option>
-                        <option value="🐉">🐉</option>
-                        <option value="🎯">🎯</option>
-                        <option value="🌟🕺🌟">🌟🕺🌟</option>
+                        <option value="😀"> Happy 😀</option>
+                        <option value="🙁"> Sad 🙁</option>
+                        <option value="😐"> Neutral 😐</option>
+                        <option value="🤬"> Angry 🤬</option>
+                        <option value="😈"> Naughty 😈</option>
+                        <option value="😎"> Cool 😎</option>
+                        <option value="🥰"> Loved 🥰</option>
+                        <option value="🐉"> Fierce 🐉</option>
+                        <option value="🎯"> Focused 🎯</option>
+                        <option value="🍆💦💦">U know 🍆💦💦</option>
+                        <option value="🌟🕺🌟"> Triumphant🌟🕺🌟</option>
                     </select><br>
-                    <button type="submit" id="myJournalButton">Record Entry</button>
-                    
+                    <button type="button" id="myJournalButton">Record Entry</button>                    
                 </fieldset>
                 
             </form>
         </article>
-        <article class="oldEntries">
-            <h2>Previous Journal Entries</h2>
-            
-        </article>
+        <section>
+            <h2 class="oldEntryHeader">Previous Journal Entries</h2>
+            <article class="oldEntries">
+                
+                
+            </article>
+        </section>
     </main>
 
     
     
 
-    <script type="module" src="/scripts/entryGrabber.js"></script>
+    
     <script type="module" src="/scripts/journal.js"></script>
 </body>
 
