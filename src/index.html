@@ -45,12 +45,21 @@
                 <hr/>                
             </form>
         </article>
-        <section class="moodSort">            
-            <label class="moodSort__title" for="moods"><h2>Filter Journal Entries by Mood</h2></label>
-            <select class="moodSort__input" name="moods" id="moods" required>
-                <option value="">Pick a mood</option>
-            </select><br>
-            <button type="button" id="moodSortButton">Filter</button> 
+        
+        <section class="journalSort">      
+            <div class="moodSort">       
+                <label class="moodSort__title" for="moods"><h2>Filter Journal Entries by Mood</h2></label>
+                <select class="moodSort__input" name="moods" id="moods" required>
+                    <option value="">Pick a mood</option>
+                </select><br>
+                <button type="button" id="moodSortButton">Filter</button>
+            </div>
+            <div class="searchBox">
+                <fieldset>
+                    <label for="searchBar">Looking for something?</label>
+                    <input type="text" id="searchBar">
+                </fieldset>
+            </div>  
         </section>
         <section>
             <h2 class="oldEntryHeader">Previous Journal Entries</h2>

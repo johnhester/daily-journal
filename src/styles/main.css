@@ -2,6 +2,7 @@
 @import 'newEntry.css';
 @import 'oldEntries.css';
 @import 'jBanner.css';
+@import 'sort.css';
 
 
 .journalBg {
@@ -27,6 +28,3 @@
     display: none;
 }
 
-.moodSort {
-    background-color: white;
-}

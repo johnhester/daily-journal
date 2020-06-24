@@ -1,0 +1,19 @@
+
+.moodSort {
+    background-color: white;
+    margin: 1rem;
+}
+
+.searchBox {
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+
+}
+
+.journalSort {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
