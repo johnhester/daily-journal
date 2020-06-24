@@ -29,5 +29,6 @@ API.getJournalEntries()
     event.registerEditListener()
     event.saveButtonListener()
     event.moodFilterListener()
+    event.searchBoxListener()
 
 

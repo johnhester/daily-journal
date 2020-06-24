@@ -3,6 +3,7 @@ import entryMechanism from "./entryDOM.js"
 import updateFormFields from "./updateEntry.js"
 import editEntry from "./editEntry.js"
 import saveEntry from "./saveEntry.js"
+import search from "./searchFilter.js"
 
 const entryList = document.querySelector(".oldEntries")
 const saveButton = document.querySelector("#myJournalButton")
@@ -69,5 +70,19 @@ export default {
 
         })
 
+    },
+    searchBoxListener() {
+
+        //kepress listener
+        document.querySelector("#searchBar").addEventListener('keypress', event => {
+            //ensures that actions only occur if the return key is hit
+            if (event.charCode === 13) {
+              const searchTerm = event.target.value
+              //fetch journal entries
+              API.getJournalEntries()
+                .then( entries => search.filterEntries(entries, searchTerm))
+                .then( searchResults => entryMechanism.journalPost(searchResults))
+            }
+          })
     }
 }
